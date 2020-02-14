@@ -9,6 +9,5 @@ pokebattle.init = function() {
 
 // ready fn
 $(function () {
-    weather.init();
+    pokebattle.init();
 });
-
