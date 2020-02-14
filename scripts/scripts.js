@@ -1,14 +1,14 @@
-console.log('test');
 
 // namespace
 const pokebattle = {};
 
-// init fn
+pokebattle.apiKeyAudra = 'Sm2MqrmUv3DBesJ7wy4vRTdhzYEsywi3',
+
+// Init function
 pokebattle.init = function() {
 };
 
-// ready fn
+// Doc Ready function
 $(function () {
-    weather.init();
+    pokebattle.init();
 });
-
