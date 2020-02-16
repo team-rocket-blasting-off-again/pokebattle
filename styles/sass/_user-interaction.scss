@@ -1,0 +1,65 @@
+
+.user-interaction {
+    background-color: #283030;
+    height: 150px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .selection {
+        border: 10px solid #7d7eaf;
+        background-color: #f8f8f8;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .selection-button {
+            background-color: #f8f8f8;
+            height: 70%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+
+            .button-sprite-container {
+                height: 50%;
+
+                .button-sprite {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            .sprite-label {
+                font-family: 'Press Start 2P', cursive;
+                font-size: 1.6rem;     
+                height: 25%;           
+                padding-top: 5%;
+            }
+
+        }
+    }
+
+    .submission {
+        background-color: #c7a750;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .submission-button {
+            background-color: #295068;
+            color: #f8f8f8;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3.0rem;
+            border: 10px solid #f8f8f8;
+            width: 95%;
+            height: 90%;
+        }
+    }
+}
+

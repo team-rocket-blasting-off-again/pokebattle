@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+}
+
+body {
+    font-size: 1.6rem; /* 10px * 1.6rem = 16px */
+    font-family: 'Roboto', sans-serif;  
+    font-family: 'Press Start 2P', cursive;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #e1f7e0;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;   
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+    border: 1px blue solid;
+}
+

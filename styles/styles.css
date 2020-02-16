@@ -234,3 +234,270 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 62.5%;
+  /* 16px * 62.5% = 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  /* 10px * 1.6rem = 16px */
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Press Start 2P', cursive;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e1f7e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px blue solid;
+}
+
+.pokebattle {
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.pulldown-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pulldown-menu .instructions {
+  background-color: #fece2f;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+}
+
+.pulldown-menu input[type="checkbox"]:checked + .instructions {
+  left: 0%;
+}
+
+.pulldown-menu input[type="checkbox"] {
+  display: none;
+}
+
+.pulldown-menu label[for="toggle"] {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pulldown-menu label[for="toggle"] .information-title {
+  color: #386cba;
+}
+
+.pulldown-menu label[for="toggle"] .sprite-container .information-sprite {
+  height: auto;
+  width: 100%;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.battleground {
+  border: 1px black solid;
+  padding: 2% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pokemon-container {
+  width: 100%;
+  height: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pokemon-container .browserPokemon,
+.pokemon-container .userPokemon {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pokemon-container .browserPokemon .selected-sprite-container,
+.pokemon-container .userPokemon .selected-sprite-container {
+  height: 50%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 25%;
+  z-index: 2;
+}
+
+.pokemon-container .browserPokemon .selected-sprite-container .browser-selected-sprite,
+.pokemon-container .browserPokemon .selected-sprite-container .user-selected-sprite,
+.pokemon-container .userPokemon .selected-sprite-container .browser-selected-sprite,
+.pokemon-container .userPokemon .selected-sprite-container .user-selected-sprite {
+  height: 100%;
+  width: auto;
+}
+
+.pokemon-container .browserPokemon .sprite-shadow,
+.pokemon-container .userPokemon .sprite-shadow {
+  background-color: #a8eb76;
+  border: 10px solid #83de7d;
+  width: 80%;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.pokemon-container:nth-child(2) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.user-interaction {
+  background-color: #283030;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-interaction .selection {
+  border: 10px solid #7d7eaf;
+  background-color: #f8f8f8;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-interaction .selection .selection-button {
+  background-color: #f8f8f8;
+  height: 70%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.user-interaction .selection .selection-button .button-sprite-container {
+  height: 50%;
+}
+
+.user-interaction .selection .selection-button .button-sprite-container .button-sprite {
+  height: 100%;
+  width: auto;
+}
+
+.user-interaction .selection .selection-button .sprite-label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  height: 25%;
+  padding-top: 5%;
+}
+
+.user-interaction .submission {
+  background-color: #c7a750;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-interaction .submission .submission-button {
+  background-color: #295068;
+  color: #f8f8f8;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3.0rem;
+  border: 10px solid #f8f8f8;
+  width: 95%;
+  height: 90%;
+}
