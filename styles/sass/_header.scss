@@ -1,0 +1,58 @@
+
+
+.pokebattle {
+    padding: 3% 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+// children
+.pulldown-menu {
+    display: flex;
+    justify-content: flex-end;
+
+    .instructions {
+        background-color: #fece2f;
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+    }
+
+    input[type="checkbox"]:checked + .instructions {
+        left: 0%;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label[for="toggle"] {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .information-title {
+            color: #386cba;
+        }
+
+        .sprite-container {
+            
+            .information-sprite {
+                height: auto;
+                width: 100%
+            }
+        }
+    }
+
+}
+
+.title {
+    margin: 0 auto;
+}
+
