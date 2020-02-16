@@ -5,48 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokebattle</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="shortcut icon" type="image/png" href="./assets/squirtle-placeholder.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/sprites/squirtle.png" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- notes -->
-    <!-- 
-        1. sprites downloaded from https://pokemondb.net/sprites 
-        2. information section is within the header, because to make a toggled info button, both the button and the information section needs to be siblings. they're both in the header section to position easier
-    -->
-
     <!-- header + information sections -->
+    <!-- 
+        notes:
+        1. sprites & gifs downloaded from https://pokemondb.net/sprites 
+        2. information section has to be sibling with toggle input to work properly
+        3. below is the semantically correct way to use an img as an h1
+        4. an a tag is used within the h1 to refresh page on click
+        5. should toggle input sprite be an after element?
+     -->
     <header class="pokebattle wrapper">
-        <!-- this is the best way semantically to use an image as an h1 -->
-        <!-- the a is to refresh the page everytime the image-title is clicked -->
         <h1 class="title">
             <a href="#" class="title-link">
                 <img src="./assets/pokebattle-title.png" alt="pokebattle" class="title-image">
             </a>
         </h1>
 
-        <!-- for the pulldown action to work, both the content and its button need to be siblings -->
-        <!-- this is the pulldown action div -->
+
         <div class="pulldown-menu">
             <label class="information" for="toggle">
                 <p class="information-title">info</p>
-                <!-- we need to turn sprite into after element -->
-                <div class="sprite-container"><img src="./assets/sprites/squirtle.png" alt="information" class="information-sprite"></div>
+                <div class="sprite-container"><img src="./assets/sprites/pikachu.png" alt="information" class="information-sprite"></div>
             </label>
             <input type="checkbox" id="toggle" name="toggle">
-            <!-- this is the pulldown div -->
+
+            <!-- instruction section -->
             <div class="instructions"></div>
         </div>
     </header>
     
+
     <!-- animation section -->
+    <!-- 
+        notes:
+        1. should sprite shadows be after-elements?
+        2. how should we organize the layout when in mobile view?
+     -->
     <section class="battleground clearfix wrapper">
         <div class="pokemon-container">
             <div class="browserPokemon">
                 <div class="selected-sprite-container">
                     <img src="./assets/gifs/charmander.gif" alt="charmander" class="browser-selected-sprite">
                 </div>
-                <!-- ? should the sprite elements be after elements? -->
                 <div class="sprite-shadow"></div>
             </div>
         </div>
@@ -61,34 +65,44 @@
         </div>
     </section>
 
+
     <!-- user interaction section -->
+    <!-- 
+            notes: 
+            1. sprite images needed to be in div containers
+            2. we should add hover states, but use triangle after elements
+            3. in JS, we should make the sprite gif change when hovering over buttons
+        -->
     <section class="user-interaction wrapper">
+        <!-- selection section -->
         <div class="selection">
             <!-- option 1 -->
             <button class="fire selection-button">
-                <div class="button-sprite-container">
-                    <img src="./assets/sprites/charmander.png" alt="charmander" class="button-sprite">
-                </div>
-                <p class="sprite-label">fire</p>
-            </button>
-
-            <!-- option 2 -->
-            <button class="grass selection-button">
                 <div class="button-sprite-container">
                     <img src="./assets/sprites/bulbasaur.png" alt="bulbasaur" class="button-sprite">
                 </div>
                 <p class="sprite-label">grass</p>
             </button>
 
-            <!-- option 3 -->
-            <button class="water selection-button">
+            <!-- option 2 -->
+            <button class="grass selection-button">
                 <div class="button-sprite-container">
                     <img src="./assets/sprites/squirtle.png" alt="squirtle" class="button-sprite">
                 </div>
                 <p class="sprite-label">water</p>
             </button>
+
+            <!-- option 3 -->
+            <button class="water selection-button">
+                <div class="button-sprite-container">
+                    <img src="./assets/sprites/charmander.png" alt="charmander" class="button-sprite">
+                </div>
+                <p class="sprite-label">fire</p>
+            </button>
         </div>
 
+
+        <!-- submission button -->
         <div class="submission">
             <input class="submission-button" type="submit" value="battle!">
         </div>
