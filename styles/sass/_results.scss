@@ -1,6 +1,6 @@
 
 
-.results {
+.results { // use commented out code during results function js
     background-color: #000000;
     display: none;
     height: 78vh;
@@ -10,11 +10,12 @@
     top: 20%;
     left: 15%;
     z-index: 100;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: nowrap;
+    // justify-content: center;
+    // align-items: center;
 
     .results-title {
         font-family: 'Press Start 2P', cursive;
