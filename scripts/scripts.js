@@ -2,10 +2,9 @@
 // Namespace
 const pokebattle = {
 
-    grass: " ",
-    water: " ",
-    fire: " ",
-    //? browser: [rock, grass, flying]
+    grass: "bulbasaur",
+    water: "squirtle",
+    fire: "charmander",
 
 };
 
@@ -17,7 +16,8 @@ pokebattle.apiKeyAudra = 'Sm2MqrmUv3DBesJ7wy4vRTdhzYEsywi3',
 pokebattle.userSelection = function() {
     
     $("button").on("click", function() {
-        pokebattle.selected = this.className;
+        const selected = this.className.slice(17);
+        $(".user-selected-sprite").attr("src", `./assets/gifs/${pokebattle[selected]}-back.gif`);
     });
 };
 
@@ -34,9 +34,11 @@ pokebattle.browserMakeChoice = function () {
 };
 
 // Check Results
+// test the text append method once the results section is complete
 pokebattle.checkResults = function () {
     if (browserMakeChoice == pokebattle.selected) {
-        console.log('tie');
+        
+        $(".results-title").text("tie!");
     } else if (browserMakeChoice == 'grass') {
         if (pokebattle.selected == 'fire') {
             console.log('win');
@@ -60,7 +62,7 @@ pokebattle.checkResults = function () {
  
 // Battle function
 pokebattle.battle = function () {
-    $("input").on("click", function() {
+    $(".submission-button").on("click", function() {
         pokebattle.browserMakeChoice();
         console.log(`The browser's choice is ${browserMakeChoice}`);
         console.log(`The user choice is ${pokebattle.selected}`);
