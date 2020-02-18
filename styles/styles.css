@@ -505,3 +505,69 @@ body {
   width: 95%;
   height: 90%;
 }
+
+.results {
+  background-color: #000000;
+  display: none;
+  height: 78vh;
+  width: 70%;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results .results-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4.0rem;
+  color: #f8f8f8;
+  margin-bottom: 2%;
+}
+
+.results .results-gif-container {
+  height: 60%;
+  width: 90%;
+  border: 1px white solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results .results-gif-container .results-gif {
+  height: 100%;
+  width: auto;
+}
+
+.results .reset-button {
+  background-color: #295068;
+  opacity: 1;
+  color: #f8f8f8;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  border: 5px solid #f8f8f8;
+  width: 150px;
+  height: 10%;
+  margin-top: 2%;
+}
