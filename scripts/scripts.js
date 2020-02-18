@@ -34,46 +34,29 @@ pokebattle.browserMakeChoice = function () {
 };
 
 // Check Results
-// ? Please check if statement syntax
 pokebattle.checkResults = function () {
-    if (pokebattle.userSelection == 'grass') {
-        checkGrass();
-    } else if (pokebattle.userSelection == 'water') {
-        checkWater();
-    } else {
-        checkFire();
-    };
-};
-
-pokebattle.checkResults.checkGrass = function () {
-    if (browserMakeChoice == 'grass') {
-        console.log(`It's a tie`);
-    } else if (browserMakeChoice == 'fire') {
-        console.log(`You lose`);
-    } else {
-        console.log(`You win`);
-    }
-};
-
-pokebattle.checkResults.checkWater = function () {
-    if (browserMakeChoice == 'water') {
-        console.log(`It's a tie`);
+    if (browserMakeChoice == pokebattle.selected) {
+        console.log('tie');
     } else if (browserMakeChoice == 'grass') {
-        console.log(`You lose`);
-    } else {
-        console.log(`You win`);
-    }
-};
-
-pokebattle.checkResults.checkFire = function () {
-    if (browserMakeChoice == 'fire') {
-        console.log(`It's a tie`);
+        if (pokebattle.selected == 'fire') {
+            console.log('win');
+        } else {
+            console.log('lose');
+        }
     } else if (browserMakeChoice == 'water') {
-        console.log(`You lose`); 
+        if (pokebattle.selected == 'grass') {
+            console.log('win');
+        } else {
+            console.log('lose');
+        }
     } else {
-        console.log(`You win`);
+        if (pokebattle.selected == 'water') {
+            console.log('win');
+        } else {
+            console.log('lose');
+        }
     }
-};
+}
  
 // Battle function
 pokebattle.battle = function () {
