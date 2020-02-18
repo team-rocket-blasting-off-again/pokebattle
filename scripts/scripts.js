@@ -18,7 +18,6 @@ pokebattle.userSelection = function() {
     
     $("button").on("click", function() {
         pokebattle.selected = this.className;
-        // append html img with string in object
     });
 };
 
@@ -32,28 +31,64 @@ pokebattle.browserMakeChoice = function () {
     // ? Not sure if I set this up right
     pokebattle.pokemon.index = Math.floor(Math.random()*pokebattle.pokemon.length);
     browserMakeChoice = pokebattle.pokemon[pokebattle.pokemon.index];
-}
+};
 
-// Calling the Random Browser Choice on click
-pokebattle.browserSelection = function() {
-    $("input").on("click", function() {
-        pokebattle.browserMakeChoice();
-        //? Just put pokebattle.selected in here to ensure it was being recorded not just when clicked on alone
-        console.log(pokebattle.selected);
-        console.log(browserMakeChoice);
+// Check Results
+// ? Please check if statement syntax
+pokebattle.checkResults = function () {
+    if (pokebattle.userSelection == 'grass') {
+        checkGrass();
+    } else if (pokebattle.userSelection == 'water') {
+        checkWater();
+    } else {
+        checkFire();
+    };
+};
 
-    });
+pokebattle.checkResults.checkGrass = function () {
+    if (browserMakeChoice == 'grass') {
+        console.log(`It's a tie`);
+    } else if (browserMakeChoice == 'fire') {
+        console.log(`You lose`);
+    } else {
+        console.log(`You win`);
+    }
+};
+
+pokebattle.checkResults.checkWater = function () {
+    if (browserMakeChoice == 'water') {
+        console.log(`It's a tie`);
+    } else if (browserMakeChoice == 'grass') {
+        console.log(`You lose`);
+    } else {
+        console.log(`You win`);
+    }
+};
+
+pokebattle.checkResults.checkFire = function () {
+    if (browserMakeChoice == 'fire') {
+        console.log(`It's a tie`);
+    } else if (browserMakeChoice == 'water') {
+        console.log(`You lose`); 
+    } else {
+        console.log(`You win`);
+    }
 };
  
 // Battle function
 pokebattle.battle = function () {
-    // pokemon selection event
+    $("input").on("click", function() {
+        pokebattle.browserMakeChoice();
+        console.log(`The browser's choice is ${browserMakeChoice}`);
+        console.log(`The user choice is ${pokebattle.selected}`);
+        pokebattle.checkResults();
+    });
+
 };
 
 // Init function
 pokebattle.init = function() {
     this.userSelection();
-    this.browserSelection();
     this.battle();
 };
 
