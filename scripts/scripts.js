@@ -1,10 +1,10 @@
 
 // Namespace
 const pokebattle = {
-    rock: "rock ",
     grass: " ",
-    flying: " ",
-    //? browser: [rock, grass, flying],
+    water: " ",
+    fire: " ",
+    //? browser: [rock, grass, flying]
 };
 
 
@@ -23,11 +23,11 @@ pokebattle.userSelection = function() {
 // Random Browser Choice
 pokebattle.browserMakeChoice = function () {
     pokebattle.pokemon = [
-        'rock',
         'grass',
-        'flying'
+        'water',
+        'fire'
     ]
-    // * Not sure if I set this up right
+    // ? Not sure if I set this up right
     pokebattle.pokemon.index = Math.floor(Math.random()*pokebattle.pokemon.length);
     browserMakeChoice = pokebattle.pokemon[pokebattle.pokemon.index];
 }
@@ -36,7 +36,7 @@ pokebattle.browserMakeChoice = function () {
 pokebattle.browserSelection = function() {
     $("input").on("click", function() {
         pokebattle.browserMakeChoice();
-        //* Just put pokebattle.selected in here to ensure it was being recorded not just when clicked on alone
+        //? Just put pokebattle.selected in here to ensure it was being recorded not just when clicked on alone
         console.log(pokebattle.selected);
         console.log(browserMakeChoice);
 
