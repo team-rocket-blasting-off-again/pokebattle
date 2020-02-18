@@ -1,10 +1,12 @@
 
 // Namespace
 const pokebattle = {
+
     grass: " ",
     water: " ",
     fire: " ",
     //? browser: [rock, grass, flying]
+
 };
 
 
@@ -44,7 +46,7 @@ pokebattle.browserSelection = function() {
 };
  
 // Battle function
-pokebattle.battle = function() {
+pokebattle.battle = function () {
     // pokemon selection event
 };
 
