@@ -5,33 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokebattle</title>
     <link rel="stylesheet" href="./styles/styles.css">
+<<<<<<< HEAD
+    <link rel="shortcut icon" type="image/png" href="./assets/sprites/squirtle.png" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap" rel="stylesheet">
+=======
     <link rel="shortcut icon" type="image/png" href="./assets/squirtle-placeholder.png" /> 
     <!-- Fix the placeholder -->
+>>>>>>> master
 </head>
 <body>
+    <!-- header + information sections -->
+    <!-- 
+        notes:
+        1. sprites & gifs downloaded from https://pokemondb.net/sprites 
+        2. information section has to be sibling with toggle input to work properly
+        3. below is the semantically correct way to use an img as an h1
+        4. an a tag is used within the h1 to refresh page on click
+        5. should toggle input sprite be an after element?
+     -->
+    <header class="pokebattle wrapper">
+        <h1 class="title">
+            <a href="#" class="title-link">
+                <img src="./assets/pokebattle-title.png" alt="pokebattle" class="title-image">
+            </a>
+        </h1>
 
-    <header class="pokebattle">
-        <!-- title -->
 
-        <div class="squirtle"><!-- img placeholder --></div>
-        <div class="instructions"></div>
+        <div class="pulldown-menu">
+            <label class="information" for="toggle">
+                <p class="information-title">info</p>
+                <div class="sprite-container"><img src="./assets/sprites/pikachu.png" alt="information" class="information-sprite"></div>
+            </label>
+            <input type="checkbox" id="toggle" name="toggle">
+
+            <!-- instruction section -->
+            <div class="instructions"></div>
+        </div>
     </header>
     
-    <section class="battleground">
-        <!-- <div class="selectedPokemon"><img src="./assets/squirtle-placeholder.png" alt="placeholder"></div> -->
+
+    <!-- animation section -->
+    <!-- 
+        notes:
+        1. should sprite shadows be after-elements?
+        2. how should we organize the layout when in mobile view?
+     -->
+    <section class="battleground clearfix wrapper">
+        <div class="pokemon-container">
+            <div class="browserPokemon">
+                <div class="selected-sprite-container">
+                    <img src="./assets/gifs/charmander.gif" alt="charmander" class="browser-selected-sprite">
+                </div>
+                <div class="sprite-shadow"></div>
+            </div>
+        </div>
+
+        <div class="pokemon-container">
+            <div class="userPokemon">
+                <div class="selected-sprite-container">
+                    <img src="./assets/gifs/bulbasaur-back.gif" alt="charmander" class="user-selected-sprite">
+                </div>
+                <div class="sprite-shadow"></div>
+            </div>
+        </div>
     </section>
 
-    <section class="user-interaction">
+
+    <!-- user interaction section -->
+    <!-- 
+            notes: 
+            1. sprite images needed to be in div containers
+            2. we should add hover states, but use triangle after elements
+            3. in JS, we should make the sprite gif change when hovering over buttons
+        -->
+    <section class="user-interaction wrapper">
+        <!-- selection section -->
         <div class="selection">
-            <button class="rock">rock</button>
-            <button class="grass">grass</button>
-            <button class="flying">flying</button>
+            <!-- option 1 -->
+            <button class="fire selection-button">
+                <div class="button-sprite-container">
+                    <img src="./assets/sprites/bulbasaur.png" alt="bulbasaur" class="button-sprite">
+                </div>
+                <p class="sprite-label">grass</p>
+            </button>
+
+            <!-- option 2 -->
+            <button class="grass selection-button">
+                <div class="button-sprite-container">
+                    <img src="./assets/sprites/squirtle.png" alt="squirtle" class="button-sprite">
+                </div>
+                <p class="sprite-label">water</p>
+            </button>
+
+            <!-- option 3 -->
+            <button class="water selection-button">
+                <div class="button-sprite-container">
+                    <img src="./assets/sprites/charmander.png" alt="charmander" class="button-sprite">
+                </div>
+                <p class="sprite-label">fire</p>
+            </button>
         </div>
 
+
+        <!-- submission button -->
         <div class="submission">
-            <input type="submit" value=""> <!-- HP: ask if this needs a value -->
+            <input class="submission-button" type="submit" value="battle!">
         </div>
     </section>
+
+    <!-- results section -->
+    <section class="results">
+
+        <h2 class="results-title">You win!</h2>
+        <div class="results-gif-container">
+            <img src="./assets/gifs/charizard.gif" alt="" class="results-gif">
+        </div>
+        <button class="reset-button" onClick="window.location.reload();" >reset</button>
+
+    </section>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="./scripts/scripts.js"></script>
 </body>

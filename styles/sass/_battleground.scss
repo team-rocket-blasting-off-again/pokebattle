@@ -1,0 +1,57 @@
+
+
+.battleground {
+    padding: 2% 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-container {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    justify-content: flex-end;
+
+    .browserPokemon,
+    .userPokemon {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .selected-sprite-container {
+            height: 50%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 25%;
+            z-index: 2;
+
+            .browser-selected-sprite,
+            .user-selected-sprite {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .sprite-shadow {
+            background-color: #a8eb76;
+            border: 10px solid #83de7d;
+            width: 80%;
+            height: 80px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+.pokemon-container:nth-child(2) {
+    justify-content: flex-start;
+}
+
