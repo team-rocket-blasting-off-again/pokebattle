@@ -247,7 +247,9 @@ body {
   font-family: 'Press Start 2P', cursive;
   height: 100vh;
   width: 100vw;
-  background-color: #e1f7e0;
+  background-color: #7ee278;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#7ee278), color-stop(71%, #e1f7e0), to(#8ec5fc));
+  background-image: linear-gradient(0deg, #7ee278 0%, #e1f7e0 71%, #8ec5fc 100%);
 }
 
 * {
