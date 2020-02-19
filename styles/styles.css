@@ -542,7 +542,7 @@ body {
   background-color: #295068;
   color: #f8f8f8;
   font-family: 'Press Start 2P', cursive;
-  font-size: 3.0rem;
+  font-size: 3rem;
   border: 10px solid #f8f8f8;
   width: 95%;
   height: 90%;
@@ -597,4 +597,16 @@ body {
   width: 150px;
   height: 10%;
   margin-top: 2%;
+}
+
+@media (max-width: 1265px) {
+  .user-interaction .submission .submission-button {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1070px) {
+  .user-interaction .submission .submission-button {
+    font-size: 2rem;
+  }
 }
