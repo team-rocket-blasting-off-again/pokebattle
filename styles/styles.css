@@ -597,8 +597,10 @@ body {
 }
 
 .results .results-gif-container .results-gif {
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   width: auto;
+  max-width: 100%;
 }
 
 .results .reset-button {
@@ -625,6 +627,93 @@ body {
 
 @media (max-width: 1070px) {
   .user-interaction .submission .submission-button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .pulldown-menu .instructions h2 {
+    font-size: 3rem;
+    margin-top: 15%;
+  }
+  .pulldown-menu .instructions p {
+    font-size: 1.8rem;
+    margin-top: 3%;
+  }
+  .pulldown-menu .instructions p:first-of-type {
+    margin-top: 10%;
+  }
+  .pulldown-menu .instructions p:nth-of-type(2) {
+    margin-top: 3%;
+  }
+  .pulldown-menu .instructions p:last-of-type {
+    margin-top: 3%;
+  }
+  .user-interaction .submission .submission-button {
+    font-size: 1.7rem;
+    border: 7px solid #f8f8f8;
+  }
+}
+
+@media (max-width: 720px) {
+  .pulldown-menu .instructions h2 {
+    font-size: 2.75rem;
+    margin-top: 35%;
+  }
+  .pulldown-menu .instructions p {
+    font-size: 1.8rem;
+    margin-top: 5%;
+  }
+  .pulldown-menu .instructions p:nth-of-type(2) {
+    margin-top: 10%;
+  }
+  .pulldown-menu .instructions p:last-of-type {
+    margin-top: 10%;
+  }
+  .user-interaction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user-interaction .selection,
+  .user-interaction .submission {
+    width: 100%;
+  }
+}
+
+@media (max-width: 525px) {
+  .results {
+    width: 75%;
+  }
+  .results .results-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pulldown-menu .instructions h2 {
+    font-size: 2rem;
+  }
+  .pulldown-menu .instructions p {
+    font-size: 1.6rem;
+  }
+  .user-interaction .selection .selection-button .sprite-label {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .pulldown-menu .instructions p {
+    font-size: 1.24rem;
+  }
+  .user-interaction .selection .selection-button .sprite-label {
+    font-size: 1.25rem;
+  }
+  .results .results-title {
     font-size: 2rem;
   }
 }
