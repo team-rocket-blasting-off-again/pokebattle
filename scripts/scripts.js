@@ -11,6 +11,8 @@ const pokebattle = {
 
 // Audra's API Key
 pokebattle.apiKeyAudra = 'Sm2MqrmUv3DBesJ7wy4vRTdhzYEsywi3',
+pokebattle.apiKeyMatt = "ytxEQAJjiRYEKOyGlh2ahsxE35jwm8Cz",
+
 
 // User Selection
 pokebattle.userSelection = function() {
@@ -35,40 +37,93 @@ pokebattle.browserMakeChoice = function () {
 
 // Check Results
 // test the text append method once the results section is complete
+pokebattle.reaction = " ";
+
 pokebattle.checkResults = function () {
     if (browserMakeChoice == pokebattle.selected) {
         $(".results-title").text("tie!");
-        console.log("tie");
+        // tie
+        const reaction = "pokemon confused";
+        pokebattle.getGif(reaction);
 
     } else if (browserMakeChoice == 'bulbasaur') {
         if (pokebattle.selected == 'charmander') {
-            console.log('win');
+            // win
+            $(".results-title").text("you win!");
+            const reaction = "pokemon happy";
+            pokebattle.getGif(reaction);
         } else {
-            console.log('lose');
+            // lose
+            $(".results-title").text("you lose!");
+            const reaction = "pokemon sad";
+            pokebattle.getGif(reaction);
         };
     } else if (browserMakeChoice == 'squirtle') {
         if (pokebattle.selected == 'bulbasaur') {
-            console.log('win');
+            // win
+            $(".results-title").text("you win!");
+            const reaction = "pokemon happy";
+            pokebattle.getGif(reaction);
         } else {
-            console.log('lose');
+            // lose
+            $(".results-title").text("you lose!");
+            const reaction = "pokemon sad";
+            pokebattle.getGif(reaction);
         };
     } else {
         if (pokebattle.selected == 'squirtle') {
-            console.log('win');
+            // win
+            $(".results-title").text("you win!");
+            const reaction = "pokemon happy";
+            pokebattle.getGif(reaction);
         } else {
-            console.log('lose');
+            $(".results-title").text("you lose!");
+            const reaction = "pokemon sad";
+            pokebattle.getGif(reaction);
         };
     };
 };
 
+// API ajax call
+pokebattle.getGif = function(reaction) {
+    $.ajax({
+        url: "http://api.giphy.com/v1/gifs/search",
+        method: "GET",
+        datatype: "json",
+        data: {
+            api_key: pokebattle.apiKeyMatt,
+            q: reaction,
+        }
+    }).then(function (response) {
+        const index = Math.floor(Math.random() * 15);
+        // parameter one: gif
+        // parameter two: alt text
+        pokebattle.displayGif(response.data[index].images.downsized.url, response.data[index].title)
+    });
+};
+
+pokebattle.displayGif = function(gif, alt) {
+    const htmlToAppend = `
+        <img src="${gif}" alt="${alt}" class="results-gif">
+    `
+
+    $('.results-gif-container').html(htmlToAppend);    
+};
+
 // Battle function
-pokebattle.battle = function () {
+pokebattle.battle = function() {
     $(".submission-button").on("click", function() {
         if (pokebattle.selected == undefined) {
             alert("select your pokemon");
         } else {
             pokebattle.browserMakeChoice();
             pokebattle.checkResults();
+
+            setTimeout(function() {
+                $(".results").removeClass("hidden").addClass("animated slideInLeft");
+            }, 0000);
+
+
         };
         // console.log(`The browser's choice is ${browserMakeChoice}`);
         // console.log(`The user choice is ${pokebattle.selected}`);
