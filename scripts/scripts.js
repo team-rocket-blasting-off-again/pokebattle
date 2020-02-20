@@ -31,8 +31,8 @@ const pokebattle = {
     water: "squirtle",
     fire: "charmander",
   
-    apiKeyAudra = 'Sm2MqrmUv3DBesJ7wy4vRTdhzYEsywi3',
-    apiKeyMatt = "ytxEQAJjiRYEKOyGlh2ahsxE35jwm8Cz",
+    apiKeyAudra: "Sm2MqrmUv3DBesJ7wy4vRTdhzYEsywi3",
+    apiKeyMatt: "ytxEQAJjiRYEKOyGlh2ahsxE35jwm8Cz",
 };
 
 
