@@ -19,7 +19,7 @@ pokebattle.userSelection = function() {
     $(".selection-button").on("click", function() {
         const userSelected = pokebattle[this.className.slice(17)];
         
-        $(".user-selected-sprite").attr("src", `./assets/gifs/${userSelected}-back.gif`);
+        $(".user-selected-sprite").attr("src", `./assets/gifs/${userSelected}-back.gif`, "alt", `${userSelected} bouncing with their back to the user`);
         pokebattle.selected = userSelected;
     });
 
@@ -41,7 +41,7 @@ pokebattle.reaction = " ";
 
 pokebattle.checkResults = function () {
     if (browserMakeChoice == pokebattle.selected) {
-        $(".results-title").text("tie!");
+        $(".results-title").text("Tie!");
         // tie
         const reaction = "pokemon confused";
         pokebattle.getGif(reaction);
@@ -49,35 +49,35 @@ pokebattle.checkResults = function () {
     } else if (browserMakeChoice == 'bulbasaur') {
         if (pokebattle.selected == 'charmander') {
             // win
-            $(".results-title").text("you win!");
+            $(".results-title").text("You Win!");
             const reaction = "pokemon happy";
             pokebattle.getGif(reaction);
         } else {
             // lose
-            $(".results-title").text("you lose!");
+            $(".results-title").text("You Lose!");
             const reaction = "pokemon sad";
             pokebattle.getGif(reaction);
         };
     } else if (browserMakeChoice == 'squirtle') {
         if (pokebattle.selected == 'bulbasaur') {
             // win
-            $(".results-title").text("you win!");
+            $(".results-title").text("You Win!");
             const reaction = "pokemon happy";
             pokebattle.getGif(reaction);
         } else {
             // lose
-            $(".results-title").text("you lose!");
+            $(".results-title").text("You Lose!");
             const reaction = "pokemon sad";
             pokebattle.getGif(reaction);
         };
     } else {
         if (pokebattle.selected == 'squirtle') {
             // win
-            $(".results-title").text("you win!");
+            $(".results-title").text("You Win!");
             const reaction = "pokemon happy";
             pokebattle.getGif(reaction);
         } else {
-            $(".results-title").text("you lose!");
+            $(".results-title").text("You Lose!");
             const reaction = "pokemon sad";
             pokebattle.getGif(reaction);
         };

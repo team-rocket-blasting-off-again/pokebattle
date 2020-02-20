@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokebattle</title>
+    <title>PokeBattle</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" type="image/png" href="./assets/sprites/squirtle.png" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
     <header class="pokebattle wrapper">
         <h1 class="title">
             <a href="#" class="title-link">
-                <img src="./assets/pokebattle-title.png" alt="pokebattle" class="title-image">
+                <img src="./assets/pokebattle-title.png" alt="PokeBattle" class="title-image">
             </a>
         </h1>
 
@@ -59,7 +59,7 @@
         <div class="pokemon-container">
             <div class="browserPokemon">
                 <div class="selected-sprite-container">
-                    <img src="./assets/sprites/question-mark.png" alt="unknown" class="browser-selected-sprite">
+                    <img src="./assets/sprites/question-mark.png" alt="Unknown Pokemon, the browser hasn't made a selection yet." class="browser-selected-sprite">
                 </div>
                 <div class="sprite-shadow"></div>
             </div>
@@ -68,7 +68,7 @@
         <div class="pokemon-container">
             <div class="userPokemon">
                 <div class="selected-sprite-container">
-                    <img src="./assets/gifs/bulbasaur-back.gif" alt="charmander" class="user-selected-sprite">
+                    <img src="./assets/gifs/bulbasaur-back.gif" alt="Bouncing bulbasaur with it's back to the user." class="user-selected-sprite">
                 </div>
                 <div class="sprite-shadow"></div>
             </div>
@@ -89,7 +89,7 @@
             <!-- option 1 -->
             <button class="selection-button grass">
                 <div class="button-sprite-container">
-                    <img src="./assets/sprites/bulbasaur.png" alt="bulbasaur" class="button-sprite">
+                    <img src="./assets/sprites/bulbasaur.png" alt="bulbasaur, grass type pokemon" class="button-sprite">
                 </div>
                 <p class="sprite-label">grass</p>
             </button>
@@ -97,7 +97,7 @@
             <!-- option 2 -->
             <button class="selection-button water">
                 <div class="button-sprite-container">
-                    <img src="./assets/sprites/squirtle.png" alt="squirtle" class="button-sprite">
+                    <img src="./assets/sprites/squirtle.png" alt="squirtle, water type pokemon" class="button-sprite">
                 </div>
                 <p class="sprite-label">water</p>
             </button>
@@ -105,7 +105,7 @@
             <!-- option 3 -->
             <button class="selection-button fire">
                 <div class="button-sprite-container">
-                    <img src="./assets/sprites/charmander.png" alt="charmander" class="button-sprite">
+                    <img src="./assets/sprites/charmander.png" alt="charmander, fire type pokemon" class="button-sprite">
                 </div>
                 <p class="sprite-label">fire</p>
             </button>
@@ -114,18 +114,18 @@
 
         <!-- submission button -->
         <div class="submission">
-            <input class="submission-button" type="submit" value="battle!">
+            <input class="submission-button" type="submit" value="Battle!">
         </div>
     </section>
 
     <!-- results section -->
     <section class="results hidden">
 
-        <h2 class="results-title">You win!</h2>
+        <h2 class="results-title">You Win!</h2>
         <div class="results-gif-container">
             <!-- reaction gif added here via js -->
         </div>
-        <button class="reset-button" onClick="window.location.reload();" >reset</button>
+        <button class="reset-button" onClick="window.location.reload();" >Reset</button>
 
     </section>
 
