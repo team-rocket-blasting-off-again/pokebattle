@@ -10,9 +10,8 @@ body {
     font-family: 'Press Start 2P', cursive;
     height: 100vh;
     width: 100vw;
-    background-color: #7ee278;
-    background-image: linear-gradient(0deg, #7ee278 0%, #e1f7e0 71%, #8ec5fc 100%);
-
+    background-color: $body-background;
+    background-image: linear-gradient(0deg, $body-background 0%, $middle-gradient 71%, $top-gradient 100%);
 
 }
 

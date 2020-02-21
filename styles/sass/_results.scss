@@ -1,8 +1,8 @@
 
 // Results Div
 .results { 
-    background-color: #7d7eaf;
-    border: 10px solid #283030;
+    background-color: $background-selection;
+    border: 10px solid $results-border;
     display: flex;
     height: 79vh;
     width: 70%;
@@ -19,7 +19,7 @@
     .results-title {
         font-family: 'Press Start 2P', cursive;
         font-size: 4.0rem;
-        color: #f8f8f8;
+        color: $lighter-general;
         margin-bottom: 2%;
     }
 
@@ -39,12 +39,12 @@
     }
 
     .reset-button {
-        background-color: #295068;
+        background-color: $battle-button-background;
         opacity: 1;
-        color: #f8f8f8;
+        color: $lighter-general;
         font-family: 'Press Start 2P', cursive;
         font-size: 1.6rem;
-        border: 5px solid #f8f8f8;
+        border: 5px solid $lighter-general;
         width: 150px;
         height: 10%;
         margin-top: 2%;
