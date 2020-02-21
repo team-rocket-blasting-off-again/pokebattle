@@ -179,6 +179,7 @@ pokebattle.battle = function() {
 
             setTimeout(function() {
                 $(".results").removeClass("hidden").addClass("animated slideInLeft");
+                $(".pulldown-menu").addClass("hidden");
             }, 0500);
         };
     });
