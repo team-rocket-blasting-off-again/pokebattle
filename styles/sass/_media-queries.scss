@@ -105,11 +105,30 @@
             font-size: 3rem;
         }
     }
+
 }
 
 @media (max-width: 480px) {
     // Instructions
     .pulldown-menu {
+
+        label[for="toggle"] {
+
+            .information-title {
+                color: blue;
+                text-shadow: -2px -2px #ffffff;
+            }
+
+            .sprite-container {
+                width: 65%;
+
+                .information-sprite {
+                    height: auto;
+                    width: 100%
+                }
+            }
+        }
+
         // Instructions Text Section
         .instructions {
             h2 {

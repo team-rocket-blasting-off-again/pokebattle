@@ -695,6 +695,17 @@ body {
 }
 
 @media (max-width: 480px) {
+  .pulldown-menu label[for="toggle"] .information-title {
+    color: blue;
+    text-shadow: -2px -2px #ffffff;
+  }
+  .pulldown-menu label[for="toggle"] .sprite-container {
+    width: 65%;
+  }
+  .pulldown-menu label[for="toggle"] .sprite-container .information-sprite {
+    height: auto;
+    width: 100%;
+  }
   .pulldown-menu .instructions h2 {
     font-size: 2rem;
   }
