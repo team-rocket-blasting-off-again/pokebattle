@@ -134,7 +134,7 @@ pokebattle.checkResults = function() {
 // The second parameter in the .displayGif method is used to determine the gif title, which is used as the alt text of the image element
 pokebattle.getGif = function(reaction) {
     $.ajax({
-        url: "http://api.giphy.com/v1/gifs/search",
+        url: "https://api.giphy.com/v1/gifs/search",
         method: "GET",
         datatype: "json",
         data: {
