@@ -53,7 +53,7 @@
         .submission {
             .submission-button{
                 font-size: 1.7rem;
-                border: 7px solid #f8f8f8;
+                border: 7px solid $lighter-general;
             } 
         }
     }
@@ -115,8 +115,8 @@
         label[for="toggle"] {
 
             .information-title {
-                color: blue;
-                text-shadow: -2px -2px #ffffff;
+                color: $water-colour;
+                text-shadow: -2px -2px $text-shadow;
             }
 
             .sprite-container {

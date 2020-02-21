@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
-    <!-- header + information sections -->
+    <!-- Header + Information Sections -->
     <!-- 
-        notes:
-        1. sprites & gifs downloaded from https://pokemondb.net/sprites 
-        2. information section has to be sibling with toggle input to work properly
-        3. below is the semantically correct way to use an img as an h1
-        4. an a tag is used within the h1 to refresh page on click
-        5. should toggle input sprite be an after element?
+        Notes:
+        1. Sprites & gifs downloaded from https://pokemondb.net/sprites 
+        2. Information section has to be sibling with toggle input to work properly
+        3. An a tag is used within the h1 to refresh page on click
      -->
+
+     <!-- Header -->
     <header class="pokebattle wrapper">
         <h1 class="title">
             <a href="#" class="title-link">
@@ -26,7 +26,7 @@
             </a>
         </h1>
 
-
+        <!-- Instruction Pull Down -->
         <div class="pulldown-menu">
             <label class="information" for="toggle">
                 <p class="information-title">Info</p>
@@ -34,7 +34,7 @@
             </label>
             <input type="checkbox" id="toggle" name="toggle">
 
-            <!-- instruction section -->
+            <!-- Instruction Section -->
             <div class="instructions">
                 <div class="wrapper">
                     <h2>Instructions</h2>
@@ -49,12 +49,7 @@
     </header>
     
 
-    <!-- animation section -->
-    <!-- 
-        notes:
-        1. should sprite shadows be after-elements?
-        2. how should we organize the layout when in mobile view?
-     -->
+    <!-- Battle Ground Section -->
     <section class="battleground clearfix wrapper">
         <div class="pokemon-container">
             <div class="browserPokemon">
@@ -76,17 +71,11 @@
     </section>
 
 
-    <!-- user interaction section -->
-    <!-- 
-            notes: 
-            1. sprite images needed to be in div containers
-            2. we should add hover states, but use triangle after elements
-            3. in JS, we should make the sprite gif change when hovering over buttons
-        -->
+    <!-- User Interaction Section - Pokemon Choice -->
     <section class="user-interaction wrapper">
-        <!-- selection section -->
+        <!-- Selection Section -->
         <div class="selection">
-            <!-- option 1 -->
+            <!-- Option 1 - Bulbasaur (Grass) -->
             <button class="selection-button grass">
                 <div class="button-sprite-container">
                     <img src="./assets/sprites/bulbasaur.png" alt="bulbasaur, grass type pokemon" class="button-sprite">
@@ -94,7 +83,7 @@
                 <p class="sprite-label">grass</p>
             </button>
 
-            <!-- option 2 -->
+            <!-- Option 2 - Squirtle (Water) -->
             <button class="selection-button water">
                 <div class="button-sprite-container">
                     <img src="./assets/sprites/squirtle.png" alt="squirtle, water type pokemon" class="button-sprite">
@@ -102,7 +91,7 @@
                 <p class="sprite-label">water</p>
             </button>
 
-            <!-- option 3 -->
+            <!-- Option 3 - Charmander (Fire) -->
             <button class="selection-button fire">
                 <div class="button-sprite-container">
                     <img src="./assets/sprites/charmander.png" alt="charmander, fire type pokemon" class="button-sprite">
@@ -112,18 +101,18 @@
         </div>
 
 
-        <!-- submission button -->
+        <!-- Submission Button -->
         <div class="submission">
             <input class="submission-button" type="submit" value="Battle!">
         </div>
     </section>
 
-    <!-- results section -->
+    <!-- Results section -->
     <section class="results hidden">
 
         <h2 class="results-title">You Win!</h2>
         <div class="results-gif-container">
-            <!-- reaction gif added here via js -->
+            <!-- Reaction gif added here via js -->
         </div>
         <button class="reset-button" onClick="window.location.reload();" >Reset</button>
 

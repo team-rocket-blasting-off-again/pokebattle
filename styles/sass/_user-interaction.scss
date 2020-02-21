@@ -1,16 +1,17 @@
 
 // User Pokemon Selection
 .user-interaction {
-    background-color: #283030;
+    background-color: $background-user-colour;
     height: 150px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 
+    // Pokemon Selection
     .selection {
-        border: 10px solid #7d7eaf;
-        background-color: #f8f8f8;
+        border: 10px solid $background-selection;
+        background-color: $lighter-general;
         width: calc(70% - 1%);
         height: 90%;
         display: flex;
@@ -18,7 +19,7 @@
         align-items: center;
 
         .selection-button {
-            background-color: #f8f8f8;
+            background-color: $lighter-general;
             height: 70%;
             width: 30%;
             display: flex;
@@ -48,7 +49,7 @@
 
     // Battle Button
     .submission {
-        background-color: #c7a750;
+        background-color: $battle-button-accent;
         width: calc(30% - 1%);
         height: 90%;
         display: flex;
@@ -56,11 +57,11 @@
         align-items: center;
 
         .submission-button {
-            background-color: #295068;
-            color: #f8f8f8;
+            background-color: $battle-button-background;
+            color: $lighter-general;
             font-family: 'Press Start 2P', cursive;
             font-size: 3rem;
-            border: 10px solid #f8f8f8;
+            border: 10px solid $lighter-general;
             width: 95%;
             height: 90%;
         }

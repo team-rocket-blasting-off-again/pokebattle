@@ -4,9 +4,9 @@
     justify-content: flex-end;
 
     .instructions {
-        background-color: #fece2f;
-        color: #000000;
-        text-shadow: -2px -2px #ffffff;
+        background-color: $instructions-background;
+        color: $text-colour;
+        text-shadow: -2px -2px $text-shadow;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -58,8 +58,8 @@
         justify-content: center;
 
         .information-title {
-            color: blue;
-            text-shadow: -2px -2px #ffffff;
+            color: $water-colour;
+            text-shadow: -2px -2px $text-shadow;
         }
 
         .sprite-container {
@@ -74,13 +74,13 @@
 
 // Span Colours for Instruction Text
 .grass-colour {
-    color: green;
+    color: $grass-colour;
 }
 
 .water-colour {
-    color: blue;
+    color: $water-colour;
 }
 
 .fire-colour {
-    color: red;
+    color: $fire-colour;
 }
