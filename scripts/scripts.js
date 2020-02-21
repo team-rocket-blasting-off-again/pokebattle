@@ -190,6 +190,17 @@ pokebattle.battle = function() {
 pokebattle.init = function() {
     this.userSelection();
     this.battle();
+
+    var mql = window.matchMedia('(max-width: 641px)');
+    
+    function titleChange(event) {
+        if(event.matches) {
+            $(".title-image").attr("src", "./assets/pokebattle-title-small.png");
+            console.log("suh dude");
+        };
+    };
+
+    mql.addListener(titleChange);
 };
 
 // Doc Ready function
