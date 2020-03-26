@@ -25,6 +25,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             border: none;
 
             .button-sprite-container {
@@ -45,6 +46,13 @@
             }
 
         }
+
+        .selection-button:hover,
+        .selection-button:focus {
+            .sprite-label {
+                color: $background-selection;
+            }
+        }
     }
 
     // Battle Button
@@ -64,6 +72,13 @@
             border: 10px solid $lighter-general;
             width: 95%;
             height: 90%;
+        }
+
+        .submission-button:hover,
+        .submission-button:focus {
+            background-color: $lighter-general;
+            color: $battle-button-background;
+            border: 10px solid $battle-button-background;
         }
     }
 }

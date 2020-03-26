@@ -49,6 +49,13 @@
         height: 10%;
         margin-top: 2%;
     }
+
+    .reset-button:hover,
+    .reset-button:focus {
+        background-color: $lighter-general;
+        color: $battle-button-background;
+        border: 5px solid $battle-button-background;
+    }
 }
 
 .hidden {

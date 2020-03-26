@@ -401,8 +401,8 @@ body {
           justify-content: flex-end;
 }
 
-.pokemon-container .browserPokemon,
-.pokemon-container .userPokemon {
+.pokemon-container .browser-pokemon,
+.pokemon-container .user-pokemon {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,8 +414,8 @@ body {
           justify-content: center;
 }
 
-.pokemon-container .browserPokemon .selected-sprite-container,
-.pokemon-container .userPokemon .selected-sprite-container {
+.pokemon-container .browser-pokemon .selected-sprite-container,
+.pokemon-container .user-pokemon .selected-sprite-container {
   height: 50%;
   width: 50%;
   display: -webkit-box;
@@ -432,16 +432,16 @@ body {
   z-index: 2;
 }
 
-.pokemon-container .browserPokemon .selected-sprite-container .browser-selected-sprite,
-.pokemon-container .browserPokemon .selected-sprite-container .user-selected-sprite,
-.pokemon-container .userPokemon .selected-sprite-container .browser-selected-sprite,
-.pokemon-container .userPokemon .selected-sprite-container .user-selected-sprite {
+.pokemon-container .browser-pokemon .selected-sprite-container .browser-selected-sprite,
+.pokemon-container .browser-pokemon .selected-sprite-container .user-selected-sprite,
+.pokemon-container .user-pokemon .selected-sprite-container .browser-selected-sprite,
+.pokemon-container .user-pokemon .selected-sprite-container .user-selected-sprite {
   height: 100%;
   width: auto;
 }
 
-.pokemon-container .browserPokemon .sprite-shadow,
-.pokemon-container .userPokemon .sprite-shadow {
+.pokemon-container .browser-pokemon .sprite-shadow,
+.pokemon-container .user-pokemon .sprite-shadow {
   background-color: #a8eb76;
   border: 10px solid #83de7d;
   width: 80%;
@@ -503,6 +503,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
 }
 
@@ -521,6 +524,11 @@ body {
   text-transform: uppercase;
   height: 25%;
   padding-top: 8%;
+}
+
+.user-interaction .selection .selection-button:hover .sprite-label,
+.user-interaction .selection .selection-button:focus .sprite-label {
+  color: #7d7eaf;
 }
 
 .user-interaction .submission {
@@ -546,6 +554,13 @@ body {
   border: 10px solid #f8f8f8;
   width: 95%;
   height: 90%;
+}
+
+.user-interaction .submission .submission-button:hover,
+.user-interaction .submission .submission-button:focus {
+  background-color: #f8f8f8;
+  color: #295068;
+  border: 10px solid #295068;
 }
 
 .results {
@@ -613,6 +628,13 @@ body {
   width: 150px;
   height: 10%;
   margin-top: 2%;
+}
+
+.results .reset-button:hover,
+.results .reset-button:focus {
+  background-color: #f8f8f8;
+  color: #295068;
+  border: 5px solid #295068;
 }
 
 .hidden {
